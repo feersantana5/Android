@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".Calculadora" >
+
+    <TextView
+        android:id="@+id/enumero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/numero1"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/eNumero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/enumero1"
+        android:layout_below="@+id/enumero1"
+        android:layout_marginTop="31dp"
+        android:text="@string/numero2"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/numero1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/enumero1"
+        android:layout_toRightOf="@+id/eNumero2"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" >
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/numero2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/numero1"
+        android:layout_alignTop="@+id/eNumero2"
+        android:ems="6"
+        android:inputType="numberDecimal"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/botonDivision"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:hint="@string/resultado"
+        android:text="@string/resultado"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/botonSuma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/eNumero2"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/numero2"
+        android:layout_marginTop="56dp"
+        android:background="#FF9900"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarSuma"
+        android:text="@string/botonSuma"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/botonMultiplicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/botonSuma"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/botonSuma"
+        android:layout_marginTop="16dp"
+        android:background="#FF9900"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarMultiplicacion"
+        android:text="@string/botonMultiplicacion"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/botonResta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/botonMultiplicacion"
+        android:layout_centerHorizontal="true"
+        android:background="#FF9900"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarResta"
+        android:text="@string/botonResta"
+        android:textSize="40sp" />
+
+    <Button
+        android:id="@+id/botonDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/botonMultiplicacion"
+        android:layout_alignBottom="@+id/botonMultiplicacion"
+        android:layout_alignLeft="@+id/botonResta"
+        android:background="#FF9900"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarDivision"
+        android:text="@string/botonDivision"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/botonLimpiar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/botonDivision"
+        android:layout_alignBottom="@+id/botonDivision"
+        android:layout_alignParentRight="true"
+        android:background="#999999"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarLimpiar"
+        android:text="@string/botonLimpiar"
+        android:textSize="23sp"
+        android:textStyle="italic" />
+
+    <Button
+        android:id="@+id/botonExponente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/botonLimpiar"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/botonResta"
+        android:background="#FF9900"
+        android:fontFamily="candara"
+        android:minHeight="80dp"
+        android:minWidth="80dp"
+        android:onClick="tratarPotencia"
+        android:text="@string/botonExponente"
+        android:textSize="23sp"
+        android:textStyle="italic" />
+
+</RelativeLayout>
